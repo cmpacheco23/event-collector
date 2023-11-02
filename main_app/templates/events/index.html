@@ -29,9 +29,9 @@
               src="{% static 'images/' %}" 
               alt=""
             >
-          </div
+          </div>
           <h2 class="card-title">{{ event.name }}</h2>
-          {% if not event_passed() %}
+          {% if not event.event_passed %}
             <p>This event is coming up on:{{ event.date }}</p>
           {% else %}
             <p>This event took place on: {{ event.date }}</p>

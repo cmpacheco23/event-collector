@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from datetime import date
+# from datetime import date
 
 # Create your models here.
 CATEGORIES = (
@@ -51,3 +51,6 @@ class Event(models.Model):
   
   def event_passed(self):
     return self.date < timezone.now().date()
+
+  class Meta:
+    ordering = ['-date']

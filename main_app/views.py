@@ -1,3 +1,4 @@
+from django import forms
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -23,9 +24,20 @@ class EventCreate(CreateView):
   fields = '__all__'
   success_url = '/events/'
 
+  def get_form(self, form_class=None):
+    form = super().get_form(form_class)
+    form.fields['date'].widget = forms.DateInput(attrs={'type': 'date'})
+    form.fields['time'].widget = forms.TimeInput(attrs={'type': 'time'})
+    return form
+  
 class EventUpdate(UpdateView):
   model = Event
   fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description'] 
+
+  def get_form(self, form_class=None):
+    form = super().get_form(form_class)
+    form.fields['date'].widget = forms.DateInput(attrs={'type': 'date'})
+    form.fields['time'].widget = forms.TimeInput(attrs={'type': 'time'})
 
 class EventDelete(DeleteView):
   model = Event
