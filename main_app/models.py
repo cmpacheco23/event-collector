@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+import datetime
 # from datetime import date
 
 # Create your models here.
@@ -34,8 +35,8 @@ CELEBRATION =(
 
 class Event(models.Model):
   name = models.CharField(max_length=150)
-  date = models.DateField('Date')
-  time = models.TimeField('Time')
+  date = models.DateField('Date', default=datetime.date.today)
+  time = models.TimeField('Time', default=datetime.time(12, 0))
   category = models.CharField(max_length=2, choices=CATEGORIES, default=[0][0])
   venue = models.CharField(max_length=150)
   address = models.TextField(max_length=250)
