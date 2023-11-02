@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Event
 # Create your views here.
 
@@ -15,3 +16,7 @@ def event_index(request):
 def event_detail(request, event_id):
   event = Event.objects.get(id=event_id)
   return render(request, 'events/detail.html', {'event': event})
+
+class EventCreate(CreateView):
+  model = Event
+  fields = '__all__'
