@@ -27,8 +27,8 @@ CATEGORIES = (
 
 class Event(models.Model):
   name = models.CharField(max_length=150)
-  date = models.CharField(max_length=50)
-  time = models.CharField(max_length=50)
+  date = models.DateField()
+  time = models.TimeField()
   category = models.CharField(max_length=2, choices=CATEGORIES, default=[0][0])
   venue = models.CharField(max_length=150)
   address = models.TextField(max_length=250)
