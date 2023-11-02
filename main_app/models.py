@@ -17,6 +17,7 @@ CATEGORIES = (
   ('FE', 'Festival'),
   ('FI', 'Film'),
   ('FO', 'Food'),
+  ('FU', 'Fundraiser'),
   ('GA', 'Gala'),
   ('MU', 'Music'),
   ('NE', 'Networking'),
@@ -40,7 +41,7 @@ class Event(models.Model):
   category = models.CharField(max_length=2, choices=CATEGORIES, default=[0][0])
   venue = models.CharField(max_length=150)
   address = models.TextField(max_length=250)
-  cost = models.IntegerField()
+  cost = models.DecimalField(max_digits=8, decimal_places=2, default='$0.00')
   celebration = models.CharField(max_length=1, choices=CELEBRATION, default=[0][0])
   description = models.TextField(max_length=250)
 

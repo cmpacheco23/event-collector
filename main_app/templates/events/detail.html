@@ -21,15 +21,19 @@
   </div>
   <div class="event-details">
     <h1>{{ event.name }}</h1>
-    <h3>{{ event.time }}</h3>
-    <h3>{{ event.venue }}</h3>
-    <h3>{{ event.location }}</h3>
-    {% comment %} {% if cat.age > 0 %}
-      <h2>A {{ cat.age }} year old {{ cat.breed }}</h2>
+    {% if not event.event_passed %}
+      <p>This event is coming up soon!</p>
     {% else %}
-      <h2>A {{ cat.breed }} kitten.</h2>
-    {% endif %} {% endcomment %}
-    <p>{{ cat.description }}</p>
+    <p>This event has already passed!</p>
+    {% endif %}
+    <h3>Date: {{ event.date }}</h3>
+    <h3>Time: {{ event.time }}</h3>
+    <h3>Category: {{ event.category }}</h3>
+    <h3>Venue: {{ event.venue }}</h3>
+    <h3>Address: {{ event.address }}</h3>
+    <h3>Cost: ${{ event.cost }}</h3>
+    <h3>Celebration: {{ event.get_celebration_display }}</h3>
+    <p>{{ event.description }}</p>
     <div class="event-actions">
       <a href="{%url 'event-update' event.id%}" class="btn warn">Edit</a>
       <a href="{%url 'event-delete' event.id%}" class="btn danger">Delete</a>
