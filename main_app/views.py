@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
 from .models import Event
 # Create your views here.
 
@@ -20,4 +21,12 @@ def event_detail(request, event_id):
 class EventCreate(CreateView):
   model = Event
   fields = '__all__'
+  success_url = '/events/'
+
+class EventUpdate(UpdateView):
+  model = Event
+  fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description'] 
+
+class EventDelete(DeleteView):
+  model = Event
   success_url = '/events/'
