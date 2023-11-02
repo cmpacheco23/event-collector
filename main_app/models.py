@@ -1,14 +1,17 @@
 from django.db import models
 
 # Create your models here.
-# class Event:
-#   def __init__(self, name, date, time, category, venue, address, cost, celebration, description):
-#     self.name = name
-#     self.date = date
-#     self.time = time
-#     self.category = category
-#     self.venue = venue
-#     self.address = address
-#     self.cost = cost
-#     self.celebration = celebration
-#     self.description = description
+class Event(models.Model):
+  name = models.CharField(max_length=150)
+  date = models.CharField(max_length=50)
+  time = models.CharField(max_length=50)
+  category = models.CharField(max_length=50)
+  venue = models.CharField(max_length=150)
+  address = models.TextField(max_length=250)
+  cost = models.CharField(max_length=50)
+  celebration = models.CharField(max_length=50)
+  description = models.TextField(max_length=250)
+
+  def __str__(self):
+      return self.name
+  
