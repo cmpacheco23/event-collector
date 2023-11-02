@@ -7,3 +7,6 @@ def home(request):
 
 def about(request):
   return render(request, 'about.html')
+
+def event_index(request): 
+  return render(request, 'events/index.html', {'events': events})
