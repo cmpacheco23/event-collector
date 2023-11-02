@@ -22,7 +22,7 @@
 <section class="card-container">
   {% for event in events %}
     <div class="card">
-      <a href="/events{{event.id}}">
+      <a href="{%url 'event-detail' event.id%}">
         <div class="card-content">
           <div class="card-img-container">
             <img 
