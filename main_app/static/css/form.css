@@ -3,9 +3,6 @@
   margin-bottom: 30px;
   text-align: center;
 }
-.page-header h1{
-  font-size: 50px;
-}
 
 .form-container {
   display: flex;
@@ -15,7 +12,7 @@
 }
 
 table {
-  padding: 0 30px;
+  padding: 0 20px;
   width: 100%;
   border-spacing: 0 20px;
 }
@@ -52,10 +49,24 @@ td > textarea {
 }
 
 span.helptext{
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 20px;
-  font-size: 29px;
+  font-size: 30px;
   color: red;
   font-style: italic;
+  padding: 0;
+}
 
+div{
+  padding: 0;
+  font-size: 30px;
+  color: blue;
+  font-style: italic;
+}
+
+.page-header h1{
+  font-size: 60px;
+  text-align: center;
+  color: black;
+  font-style: normal;
 }
