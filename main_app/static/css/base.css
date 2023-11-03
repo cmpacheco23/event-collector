@@ -195,6 +195,7 @@ nav a:hover {
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
+  font-family: 'Rancho', cursive;
 }
 
 .page-header img {

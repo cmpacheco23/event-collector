@@ -56,9 +56,10 @@ main{
 
 
 .event-details h1 {
-  font-size: 60px;
+  font-size: 90px;
   margin: 15px 0 3px;
   margin-bottom: 30px;
+  font-family: 'Rancho', cursive;
 }
 
 .event-details h2 {
