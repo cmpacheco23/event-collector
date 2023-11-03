@@ -30,7 +30,7 @@ def event_detail(request, event_id):
 
 class EventCreate(CreateView):
   model = Event
-  fields = '__all__'
+  fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description']
   success_url = '/events/'
 
   def get_form(self, form_class=None):
@@ -47,7 +47,7 @@ class EventCreate(CreateView):
 
 class EventUpdate(UpdateView):
   model = Event
-  fields = '__all__'
+  fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description']
 
   def get_form(self, form_class=None):
     form = super().get_form(form_class)
@@ -68,7 +68,7 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('dog-index')
+      return redirect('event-index')
     else:
       error_message= 'Invalid signup - try again'
   form = UserCreationForm()

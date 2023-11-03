@@ -44,7 +44,7 @@ class Event(models.Model):
   address = models.TextField(max_length=250)
   cost = models.DecimalField(max_digits=8, decimal_places=2, default='$0.00')
   celebration = models.CharField(max_length=1, choices=CELEBRATION, default=[0][0])
-  description = models.TextField(max_length=250)
+  description = models.TextField(max_length=250, blank=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   
   def __str__(self):
