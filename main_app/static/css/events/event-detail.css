@@ -67,16 +67,19 @@ main{
   margin: 0 0 10px;
   margin-top: 0;
   margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .event-details h3 {
   margin: 20px 0 10px;
   font-size: 32px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .event-details p {
   font-size: 30px;
   margin: 5px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 p.event-passed{
@@ -85,6 +88,7 @@ p.event-passed{
   font-style: italic;
   color: red;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .event-actions {
