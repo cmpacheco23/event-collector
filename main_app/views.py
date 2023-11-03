@@ -68,9 +68,9 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('event-index')
+      return redirect('dog-index')
     else:
-      error_message = 'Invalid sign up - try again'
-      form = UserCreationForm()
-      context = {'form': form, 'error_message': error_message}
-      return render(request, 'signup.html', context)
+      error_message= 'Invalid signup - try again'
+  form = UserCreationForm()
+  context = {'form':form, 'error_message': error_message}
+  return render(request, 'signup.html', context)
