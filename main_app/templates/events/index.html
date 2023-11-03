@@ -27,7 +27,7 @@
           <div class="card-img-container">
             {% with category_code=event.category %}
               <img 
-                src="{% static 'images/category_images/' %}{% if category_code in CATEGORIES.0.0 %}{{ category_code }}.png{% else %}default.png{% endif %}"
+                src="{% static 'images/category_images/' %}{% if category_code %}{{ category_code }}.png{% else %}default.png{% endif %}"
                 alt=""
               >
             {% endwith %}
