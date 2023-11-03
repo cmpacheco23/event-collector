@@ -59,7 +59,6 @@ class EventUpdate(LoginRequiredMixin, UpdateView):
     form.fields['time'].widget = forms.TimeInput(attrs={'type': 'time'})
     form.fields['cost'].widget = CurrencyInput(attrs={'placeholder': '$'})
     form.fields['address'].widget = AddressInput(attrs={"placeholder": '123 Main St, City, State, ZIP, Country'})
-    form.fields['description'].widget = forms.Textarea(attrs={'data-character-count': form.initial.get('description', ''), 'id': 'description-input'})
     return form
   
 class EventDelete(LoginRequiredMixin, DeleteView):
