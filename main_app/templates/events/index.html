@@ -25,10 +25,12 @@
       <a href="{%url 'event-detail' event.id%}">
         <div class="card-content">
           <div class="card-img-container">
-            <img 
-              src="{% static 'images/' %}" 
-              alt=""
-            >
+            {% with category_code=event.category %}
+              <img 
+                src="{% static 'images/category_images/' %}{% if category_code in CATEGORIES.0.0 %}{{ category_code }}.png{% else %}default.png{% endif %}"
+                alt=""
+              >
+            {% endwith %}
           </div>
           <h2 class="card-title">{{ event.name }}</h2>
           {% if not event.event_passed %}

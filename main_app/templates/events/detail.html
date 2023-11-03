@@ -26,6 +26,12 @@
     {% else %}
     <p>This event has already passed!</p>
     {% endif %}
+    {% with category_code=event.category %}
+      <img 
+        src="{% static 'images/category_images/' %}{% if category_code in CATEGORIES.0.0 %}{{ category_code }}.png{% else %}default.png{% endif %}"
+        alt=""
+      >
+    {% endwith %}
     <h3>Date: {{ event.date }}</h3>
     <h3>Time: {{ event.time }}</h3>
     <h3>Category: {{ event.get_category_display }}</h3>
