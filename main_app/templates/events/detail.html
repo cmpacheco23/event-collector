@@ -28,8 +28,8 @@
     {% endif %}
     {% with category_code=event.category %}
       <img 
-        src="{% static 'images/category_images/' %}{% if category_code in CATEGORIES.0.0 %}{{ category_code }}.png{% else %}default.png{% endif %}"
-        alt=""
+        src="{% static 'images/category_images/' %}{% if category_code %}{{ category_code }}.png{% else %}default.png{% endif %}"
+        alt="Category: {{ event.get_category_display }}"
       >
     {% endwith %}
     <h3>Date: {{ event.date }}</h3>
