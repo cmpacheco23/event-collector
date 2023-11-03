@@ -28,7 +28,7 @@
     {% endif %}
     <h3>Date: {{ event.date }}</h3>
     <h3>Time: {{ event.time }}</h3>
-    <h3>Category: {{ event.category }}</h3>
+    <h3>Category: {{ event.get_category_display }}</h3>
     <h3>Venue: {{ event.venue }}</h3>
     <h3>Address: {{ event.address }}</h3>
     <h3>Cost: ${{ event.cost }}</h3>
