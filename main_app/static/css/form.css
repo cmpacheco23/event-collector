@@ -1,31 +1,43 @@
+.page-header{
+  margin-top: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.page-header h1{
+  font-size: 50px;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 30px;
 }
 
 table {
-  padding: 0 40px;
+  padding: 0 30px;
   width: 100%;
   border-spacing: 0 20px;
 }
 
 th {
   text-align: left;
-  padding: 6px 20px 0 0;
+  padding: 6px 30px 0 0;
   font-weight: normal;
   vertical-align: top;
-  font-size: var(--font-reg);
+  font-size: 36px;
 }
 
 td {
-  max-width: 60%;
+  max-width: 100%;
 }
 
 td > * {
   width: 100%;
-  padding: 2px 4px;
-  font-size: var(--font-l);
+  padding: 10px 20px;
+  font-size: 34px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 td > textarea {
@@ -34,6 +46,16 @@ td > textarea {
 }
 
 .btn {
-  align-self: flex-end;
-  margin-right: 40px;
+  align-self: flex-start;
+  margin-left: 30px;
+  font-size: 36px;
+}
+
+span.helptext{
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 29px;
+  color: red;
+  font-style: italic;
+
 }
