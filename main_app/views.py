@@ -5,6 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Event
 # Create your views here.
 
@@ -31,7 +32,7 @@ def event_detail(request, event_id):
   event = Event.objects.get(id=event_id)
   return render(request, 'events/detail.html', {'event': event})
 
-class EventCreate(CreateView):
+class EventCreate(LoginRequiredMixin, CreateView):
   model = Event
   fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description']
   success_url = '/events/'
@@ -48,7 +49,7 @@ class EventCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class EventUpdate(UpdateView):
+class EventUpdate(LoginRequiredMixin, UpdateView):
   model = Event
   fields = ['name', 'date', 'time', 'category', 'venue', 'address', 'cost', 'celebration', 'description']
 
@@ -60,7 +61,7 @@ class EventUpdate(UpdateView):
     form.fields['address'].widget = AddressInput(attrs={"placeholder": '123 Main St, City, State, ZIP, Country'})
     return form
   
-class EventDelete(DeleteView):
+class EventDelete(LoginRequiredMixin, DeleteView):
   model = Event
   success_url = '/events/'
 
