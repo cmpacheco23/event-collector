@@ -25,20 +25,37 @@
         >
       </a>
     </div>
-    <nav>
-      <ul>
+
+  <div class="wrapper">
+    <nav class="menu" id="menu">
+      <ul class="menu__list">
         {% if user.is_authenticated %}
-          <li><a href="{% url "about" %}">About</a></li>
-          <li><a href="{% url "event-index" %}">All Events</a></li>
-          <li><a href="{% url "event-create" %}">Add Event</a></li>
-          <li><a href="{% url "logout" %}">Log out</a></li>
+          <li class="menu__link" id="about-link">
+            <a href="{% url "about" %}" class="r-link">About</a>
+          </li>
+          <li class="menu__link" id="all-events-link">
+            <a href="{% url "event-index" %}" class="r-link">All Events</a>
+          </li>
+          <li class="menu__link" id="add-event-link">
+            <a href="{% url "event-create" %}" class="r-link">Add Event</a>
+          </li>
+          <li class="menu__link" id="logout-link">
+            <a href="{% url "logout" %}" class="r-link">Log out</a>
+          </li>
         {% else %}
-          <li><a href="{% url "about" %}">About</a></li>
-          <li><a href="{% url "login" %}">Login</a></li>
-          <li><a href="{% url "signup" %}">Sign Up</a></li>
+          <li class="menu__link" id="about-link">
+            <a href="{% url "about" %}" class="r-link">About</a>
+          </li>
+          <li class="menu__link" id="login-link">
+            <a href="{% url "login" %}" class="r-link">Login</a>
+          </li>
+          <li class="menu__link" id="signup-link">
+            <a href="{% url "signup" %}" class="r-link">Sign Up</a>
+          </li>
         {% endif %}
       </ul>
     </nav>
+  </div>
   </header>
   <main>
     {% block content %}

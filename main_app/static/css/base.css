@@ -1,3 +1,79 @@
+.menu {
+  --rLinkColor: var(--menuLinkColor, currentColor);
+  background-color: var(--menuBackgroundColor, #1b1a25);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+  border-radius: 18px;
+  margin: 10px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__link {
+  display: var(--menuLinkDisplay, block);
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Focus state */
+.menu__link:focus {
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+/* Fading siblings */
+.menu:hover .menu__link:not(:hover) {
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+/* Text Underlined Styles */
+.text-underlined {
+  position: relative;
+  overflow: hidden;
+  will-change: color;
+  transition: color .25s ease-out;
+}
+
+.text-underlined::before,
+.text-underlined::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+  will-change: width;
+  transition: width .1s ease-out;
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-underlined::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text-underlined:hover::before,
+.text-underlined:hover::after {
+  width: 100%;
+  transition-duration: .2s;
+}
+
+/* Custom Settings */
+.page__custom-settings {
+  --menuBackgroundColor: #6c5ce7;
+  --menuLinkColor: #fff;
+  --menuLinkColorUnactive: #241c69;
+  --menuLinkOutlineOffset: -.5rem;
+}
+
 html {
   box-sizing: border-box
 }
@@ -43,8 +119,19 @@ body {
 
 header {
   width: 100%;
-  background: var(--nav-bg-ff); 
-  border-bottom: var(--borders);
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Update the hover style for the new "menu__link" class */
+.menu__link:hover {
+  color: var(--link-hover-color);
 }
 
 nav {
@@ -68,30 +155,15 @@ h2 {
 
 nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 26px;
+  padding: 15px;
+  margin: 30px;
 }
 
 nav a:hover {
-  color: var(--link-hover-color)
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav li {
-  padding: 5px 8px;
-}
-
-.header-logo-container {
-  margin: auto;
-  padding: 10px 20px 0;
-  max-width: 500px;
+  color: #e0c0e8;
 }
 
 .page-header {
@@ -156,6 +228,15 @@ nav li {
   font-size: var(--font-reg);
 }
 
+.header-logo-container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header-logo-container img {
+  max-width: 100%;
+  height: auto;
+}
 @media only screen and (min-width: 768px) {
   header {
     position: sticky;
@@ -170,19 +251,13 @@ nav li {
     min-height: calc(100vh - 53px);
   }
 
-  nav,
   .header-logo-container {
-    margin: 10px 0;
-    padding: 0 15px;
-  }
-
-  /* visual fix to help align logo */
-  .header-logo-container {
-    padding-top: 3px;
+    text-align: left; /* Align the logo to the left */
+    padding: 10px 20px 0;
   }
 
   nav {
-    margin-left: auto;
+    margin: 0;
     display: flex;
     justify-content: center;
   }
@@ -191,9 +266,6 @@ nav li {
     flex-wrap: nowrap;
   }
 
-  .header-logo-container {
-    width: 213px;
-  }
 
   .page-header h1 {
     font-size: var(--font-xtreme);
@@ -208,59 +280,4 @@ nav li {
     margin-left: 25px;
   }
 
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      background: var(--nav-bg);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-    }
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  main {
-    min-height: calc(100vh - 55px);
-  }
-  
-  header {
-    margin: 20px 20px 0 20px;
-    width: calc(100vw - 40px);
-    max-width: 1920px;
-    top: 20px;
-    background-color: transparent;
-    border-bottom: none;
-  }
-
-  nav,
-  .header-logo-container {
-    margin: 0;
-    background: var(--nav-bg-ff);
-    border: var(--borders);
-    border-radius: 18px;
-  }
-
-  nav {
-    margin-left: auto;
-  }
-
-  .header-logo-container {
-    /* visual fix to help align logo */
-    padding-top: 6px;
-    width: 256px;
-    height: 35px;
-  }
-
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      -webkit-backdrop-filter: none;
-      backdrop-filter: none;
-    }
-
-    nav,
-    .header-logo-container {
-      background: rgba(104, 197, 248, .6);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-    }
-  }
 }
