@@ -1,18 +1,20 @@
 from django import forms
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 
 from .models import Event
 # Create your views here.
 
+class Home(LoginView):
+  template_name = 'home.html'
+  
 class CurrencyInput(forms.NumberInput):
   input_type = 'text'
 
 class AddressInput(forms.TextInput):
   input_type = 'text'
 
-def home(request):
-  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')
