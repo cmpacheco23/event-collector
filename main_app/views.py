@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import Event
 # Create your views here.
 
@@ -20,10 +21,12 @@ class AddressInput(forms.TextInput):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def event_index(request): 
   events = Event.objects.filter(user=request.user)
   return render(request, 'events/index.html', {'events': events})
 
+@login_required
 def event_detail(request, event_id):
   event = Event.objects.get(id=event_id)
   return render(request, 'events/detail.html', {'event': event})
