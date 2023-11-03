@@ -2,7 +2,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 import datetime
-# from datetime import date
+
+from django.contrib.auth.models import User
 
 # Create your models here.
 CATEGORIES = (
@@ -44,7 +45,8 @@ class Event(models.Model):
   cost = models.DecimalField(max_digits=8, decimal_places=2, default='$0.00')
   celebration = models.CharField(max_length=1, choices=CELEBRATION, default=[0][0])
   description = models.TextField(max_length=250)
-
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  
   def __str__(self):
     return f"{self.get_category_display()} on {self.name}"
   
