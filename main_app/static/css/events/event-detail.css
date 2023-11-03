@@ -88,11 +88,15 @@ p.event-passed{
 
 .event-actions {
   margin-bottom: 35px;
+  display: flex; /* Use flex display */
 }
 
+/* Style for the buttons */
 .btn.warn, .btn.danger  {
   font-size: 34px;
+  margin-right: 45px;
 }
+
 
 
 
