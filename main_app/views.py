@@ -8,7 +8,7 @@ from .models import Event
 
 class Home(LoginView):
   template_name = 'home.html'
-  
+
 class CurrencyInput(forms.NumberInput):
   input_type = 'text'
 
@@ -40,6 +40,10 @@ class EventCreate(CreateView):
     form.fields['address'].widget = AddressInput(attrs={"placeholder": '123 Main St, City, State, ZIP, Country'})
     return form
   
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
 class EventUpdate(UpdateView):
   model = Event
   fields = '__all__'
