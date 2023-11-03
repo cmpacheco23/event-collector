@@ -21,7 +21,7 @@ def about(request):
   return render(request, 'about.html')
 
 def event_index(request): 
-  events = Event.objects.all()
+  events = Event.objects.filter(user=request.user)
   return render(request, 'events/index.html', {'events': events})
 
 def event_detail(request, event_id):
