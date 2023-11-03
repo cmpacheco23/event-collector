@@ -42,7 +42,7 @@ class Event(models.Model):
   category = models.CharField(max_length=2, choices=CATEGORIES, default=[0][0])
   venue = models.CharField(max_length=150)
   address = models.TextField(max_length=250)
-  cost = models.DecimalField(max_digits=8, decimal_places=2, default='$0.00')
+  cost = models.DecimalField(max_digits=8, decimal_places=2, default= 0, help_text='Please enter the amount as a number without the "$" symbol, e.g., 0.00 or 0')
   celebration = models.CharField(max_length=1, choices=CELEBRATION, default=[0][0])
   description = models.TextField(max_length=250, blank=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
