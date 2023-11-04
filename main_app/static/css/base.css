@@ -417,7 +417,7 @@ hr {
   color: black;
 }
 
-section{
+.about section {
   display: flex;
   flex-direction: column;
   justify-content: center;

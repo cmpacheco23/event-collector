@@ -69,9 +69,13 @@
   font-size: 100px;
   margin-top: 50px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 img.event-icon{
   width: 70px;
   height: 70px;
+}
+section {
+  justify-content: center;
 }
