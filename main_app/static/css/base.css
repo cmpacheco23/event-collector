@@ -1,3 +1,9 @@
+/* Adjust header layout for smaller screens */
+.header-logo-container {
+  text-align: left;
+  padding: 10px 20px 0;
+}
+
 .menu {
   --rLinkColor: var(--menuLinkColor, currentColor);
   background-color: var(--menuBackgroundColor, #1b1a25);
@@ -7,6 +13,9 @@
   padding: 0 15px;
   width: 100%;
 }
+
+/* Rest of your CSS styles */
+
 
 .menu__list {
   display: flex;
@@ -92,6 +101,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
@@ -201,10 +211,14 @@ nav a:hover {
 .abouth1{
   font-size: 60px;
   font-family: 'Rancho', cursive;
+  letter-spacing: 2px;
+  word-spacing: px;
+  text-align: center;
 }
 .abouth2{
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 .page-header img {
   height: 40px;
@@ -216,18 +230,11 @@ nav a:hover {
 }
 
 .page-content {
-  font-size: 30px;
-}
-
-.header-logo-container {
+  font-size: 35px;
   text-align: center;
-  padding: 10px 0;
 }
 
-.header-logo-container img {
-  max-width: 100%;
-  height: auto;
-}
+
 @media only screen and (min-width: 768px) {
   header {
     position: sticky;
@@ -360,13 +367,61 @@ nav a:hover {
 }
 
 .logos img {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 65px;
+  max-height: 65px;
   margin-right: 20px;
 }
 
 .carla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   max-width: 150px;
   margin-top: 25px;
+}
+
+/* Style for the ul */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the li items */
+ul li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px; /* Adjust the font size as needed */
+  margin-bottom: 25px; /* Add spacing between list items */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Add a bullet point or emoji before each list item */
+ul li::before {
+  margin-right: 10px; /* Add spacing between the bullet point and text */
+}
+
+.sitelogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  align-self: center;
+}
+hr {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: black;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1300px;
 }
