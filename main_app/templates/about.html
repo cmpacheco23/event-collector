@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
-<h1>About the Event Collector</h1>
+<h1 class="abouth1">About the Event Collector</h1>
 <hr />
+<img class="carla" src="{% static 'images/carla.png' %}" alt="github logo">
+<h2 class="abouth2">Carla Pacheco</h2>
 <p class="page-content">
   Software Engineer passionate about crafting technical solutions that bridge the gap between client needs and innovative products. My background is in marketing and e-commerce, primarily within MarTech and SaaS companies. Also, I am currently job seeking!
 </p>
-
+<div class="logos">
+  <a href="https://github.com/cmpacheco23">
+    <img src="{% static 'images/github.svg' %}" alt="github logo">
+  </a>
+  <a href="https://www.linkedin.com/in/thecarlapacheco/">
+    <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn logo">
+  </a>
+</div>
 {% endblock %}

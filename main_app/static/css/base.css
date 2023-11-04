@@ -198,6 +198,14 @@ nav a:hover {
   font-family: 'Rancho', cursive;
 }
 
+.abouth1{
+  font-size: 60px;
+  font-family: 'Rancho', cursive;
+}
+.abouth2{
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+}
 .page-header img {
   height: 40px;
   margin-left:15px;
@@ -208,7 +216,7 @@ nav a:hover {
 }
 
 .page-content {
-  font-size: var(--font-reg);
+  font-size: 30px;
 }
 
 .header-logo-container {
@@ -351,4 +359,14 @@ nav a:hover {
   transform: translate(0, 5%);
 }
 
+.logos img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 20px;
+}
 
+.carla {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-top: 25px;
+}
