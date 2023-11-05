@@ -7,24 +7,17 @@
 
 {% block content %}
 
-<section class="logo-container">
-  <div class="event-container">
-    <img src="{% static 'images/splash.svg' %}" alt="" />
-  </div>
-  <img 
-    src="{% static 'images/logotype.svg' %}" 
-    alt="Text reads: Event Collector"
-  />
-</section>
-
 {% if not user.is_authenticated %}
 <section>
+  <div class="event-container">
+    <img src="{% static 'images/logo.png' %}" alt="Event Captcha Logo" />
+  </div>
   <form action="{%url 'home'%}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
     {{form.as_p}}
     <input type="hidden" name="next" value="{{next}}">
-    <button type="submit" class="btn submit button-86">Login</button>
+    <button type="submit" class="btn submit button-86 loginbtn">Login</button>
   </form>
 </section>
 {% endif %}

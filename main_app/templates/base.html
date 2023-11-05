@@ -21,37 +21,35 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
-        <img 
-          src="{% static "images/logo.png" %}"
-          alt="The Cat Collector Logo"
-        >
-      </a>
+      <img 
+        src="{% static "images/logo.png" %}"
+        alt="The Cat Collector Logo"
+      >
     </div>
     <div>
         <nav class="menu" id="menu">
           <ul class="menu__list">
             {% if user.is_authenticated %}
-              <li class="menu__link" id="about-link">
+              <li class="menu__link">
                 <a href="{% url "about" %}" class="r-link">About</a>
               </li>
-              <li class="menu__link" id="all-events-link">
+              <li class="menu__link" >
                 <a href="{% url "event-index" %}" class="r-link">All Events</a>
               </li>
-              <li class="menu__link" id="add-event-link">
+              <li class="menu__link">
                 <a href="{% url "event-create" %}" class="r-link">Add Event</a>
               </li>
-              <li class="menu__link" id="logout-link">
+              <li class="menu__link" >
                 <a href="{% url "logout" %}" class="r-link">Log out</a>
               </li>
             {% else %}
-              <li class="menu__link" id="about-link">
+              <li class="menu__link">
                 <a href="{% url "about" %}" class="r-link">About</a>
               </li>
-              <li class="menu__link" id="login-link">
+              <li class="menu__link">
                 <a href="{% url "login" %}" class="r-link">Login</a>
               </li>
-              <li class="menu__link" id="signup-link">
+              <li class="menu__link">
                 <a href="{% url "signup" %}" class="r-link">Sign Up</a>
               </li>
             {% endif %}
