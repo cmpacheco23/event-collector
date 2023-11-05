@@ -160,9 +160,6 @@ body {
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
-  --warn: rgb(255, 102, 0);
-  --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
@@ -225,10 +222,6 @@ nav a:hover {
   margin: 20px;
 }
 
-.submit {
-  color: var(--submit);
-  border-color: var(--submit);
-}
 
 .secondary {
   color: var(--secondary);
@@ -327,7 +320,6 @@ nav a:hover {
 
 .button-86 {
   all: unset;
-
   height: 30px;
   font-size: 16px;
   background: transparent;
