@@ -19,45 +19,35 @@
   {% endblock %}
 </head>
 <body>
-  <header>
-    <div class="header-logo-container">
-      <img 
-        src="{% static "images/logo.png" %}"
-        alt="The Cat Collector Logo"
-      >
-    </div>
-    <div>
-        <nav class="menu" id="menu">
-          <ul class="menu__list">
-            {% if user.is_authenticated %}
-              <li class="menu__link">
-                <a href="{% url "about" %}" class="r-link">About</a>
-              </li>
-              <li class="menu__link" >
-                <a href="{% url "event-index" %}" class="r-link">All Events</a>
-              </li>
-              <li class="menu__link">
-                <a href="{% url "event-create" %}" class="r-link">Add Event</a>
-              </li>
-              <li class="menu__link" >
-                <a href="{% url "logout" %}" class="r-link">Log out</a>
-              </li>
-            {% else %}
-              <li class="menu__link">
-                <a href="{% url "about" %}" class="r-link">About</a>
-              </li>
-              <li class="menu__link">
-                <a href="{% url "login" %}" class="r-link">Login</a>
-              </li>
-              <li class="menu__link">
-                <a href="{% url "signup" %}" class="r-link">Sign Up</a>
-              </li>
-            {% endif %}
-          </ul>      
-        </nav>
-    </div>
-    
-  </header>
+  <nav class="menu">
+    <ul class="menulist">
+      {% if user.is_authenticated %}
+        <li>
+          <a href="{% url "about" %}" class="navurl">About</a>
+        </li>
+        <li>
+          <a href="{% url "event-index" %}" class="navurl">All Events</a>
+        </li>
+        <li>
+          <a href="{% url "event-create" %}" class="navurl">Add Event</a>
+        </li>
+        <li>
+          <a href="{% url "logout" %}" class="navurl">Log out</a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{% url "about" %}" class="navurl">About</a>
+        </li>
+        <li>
+          <a href="{% url "home" %}" class="navurl">Login</a>
+        </li>
+        <li>
+          <a href="{% url "signup" %}" class="navurl">Sign Up</a>
+        </li>
+      {% endif %}
+    </ul>      
+  </nav>
+
   <main>
     {% block content %}
     {% endblock %}

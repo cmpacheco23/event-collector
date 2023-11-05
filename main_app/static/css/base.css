@@ -1,96 +1,43 @@
-header {
-  position: sticky;
-  display: flex;
-  flex-direction: row;
-  top: 0; /* Stick the header at the top of the viewport */
-  align-items: center;
-  z-index: 1000;
-  /* ... other styles ... */
-}
-
-.header-logo-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 30%;
-  transform: translateX(-50%);
-  z-index: 2; /* Place the logo above the menu */
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.header-logo-container img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-
 .menu {
-  --rLinkColor: var(--menuLinkColor, currentColor);
-  background-color: var(--menuBackgroundColor, #1b1a25);
-  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
-  border-radius: 18px;
-  margin: 10px;
-  padding: 0 15px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 80px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1; /* Place the menu behind the logo */
-  margin-top: 60px;
-}
-
-/* Rest of your CSS... */
-
-
-.menu__list {
-  display: flex;
-  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: rgb(51, 2, 53);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: BOLD;
 }
 
-/* Rest of your CSS styles... */
+.menu .menulist li {
+  display: inline;
+  margin-right: 40px;
+}
 
-
-.menu__link {
-  display: var(--menuLinkDisplay, block);
-  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
-  font-weight: 700;
-  text-transform: uppercase;
+.menu .menulist li a {
   text-decoration: none;
-  color: var(--menuLinkColor, currentColor);
-  transition: color 0.25s ease-out;
+  color: white;
+  font-size: 40px;
+  transition: color 0.3s;
 }
 
-.menu__link:focus {
-  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
-  outline-offset: var(--menuLinkOutlineOffset);
+.menu .menulist li a:hover {
+  color: plum;
 }
 
-.menu__link:hover {
-  color: var(--menuLinkColorUnactive, rgba(22, 22, 22, 0.35));
+.navurl{
+  margin: 20px;
 }
 
-/* Other CSS styles remain the same */
-
-
-/* Fading siblings */
-.menu:hover .menu__link:not(:hover) {
-  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
-}
-
-/* Text Underlined Styles */
 .text-underlined {
   position: relative;
   overflow: hidden;
   will-change: color;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 .text-underlined::before,
@@ -98,9 +45,8 @@ header {
   content: "";
   width: 0;
   height: 3px;
-  background-color: var(--textUnderlinedLineColor, currentColor);
   will-change: width;
-  transition: width .1s ease-out;
+  transition: width 0.1s ease-out;
   position: absolute;
   bottom: 0;
 }
@@ -118,28 +64,22 @@ header {
 .text-underlined:hover::before,
 .text-underlined:hover::after {
   width: 100%;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 }
 
-/* Custom Settings */
+.r-link {
+  color: white;
+}
 .page__custom-settings {
   --menuBackgroundColor: #6c5ce7;
   --menuLinkColor: #fff;
   --menuLinkColorUnactive: #241c69;
-  --menuLinkOutlineOffset: -.5rem;
+  --menuLinkOutlineOffset: -0.5rem;
 }
 
 html {
-  box-sizing: border-box
-}
-
-*::before, 
-*::after { 
-  box-sizing: inherit;
-}
-
-:root {
-  font-size: 62.5%
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
@@ -148,44 +88,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
-    'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;
   background-color: #F7EDE2;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
+  --nav-bg: rgba(104, 197, 248, 0.7);
+  --nav-bg-ff: rgba(104, 197, 248, 0.9);
   --borders: rgb(36, 116, 248) solid 2px;
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(16, 56, 158);
-  --button-bg: rgb(245, 245, 245);
-  --button-bg-hover: rgb(226, 226, 226);
-  --secondary: rgb(57, 57, 57);
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
-  --font-xtreme: 4.2rem;
-  --font-xxl: 3.6rem;
-  --font-xl: 2.4rem;
-  --font-l: 1.8rem;
-  --font-reg: 1.6rem;
-  --card-border-radius: 6px;
-}
-
-.menu__link {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 600;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* Update the hover style for the new "menu__link" class */
-.menu__link:hover {
-  color: var(--link-hover-color);
-}
-
-nav {
-  margin: 10px;
-  width: 100%;
 }
 
 ul {
@@ -195,47 +105,13 @@ ul {
 }
 
 main {
-  width: 100%;
+  width: 100vw;
   padding: 0 10px;
 }
 
-h2 {
-  font-size: var(--font-xl);
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  font-size: 26px;
-  padding: 15px;
-  margin: 30px;
-}
-
-nav a:hover {
-  color: #e0c0e8;
-}
-
 .page-header {
-  /* display: flex; */
   align-items: center;
   margin: 20px;
-}
-
-
-.secondary {
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.warn {
-  color: var(--warn);
-  border-color: var(--warn);
-}
-
-.danger {
-  color: var(--danger);
-  border-color: var(--danger);
 }
 
 .page-header h1 {
@@ -244,21 +120,22 @@ nav a:hover {
   font-family: 'Rancho', cursive;
 }
 
-.abouth1{
+.abouth1 {
   font-size: 60px;
   font-family: 'Rancho', cursive;
   letter-spacing: 2px;
-  word-spacing: px;
   text-align: center;
 }
-.abouth2{
+
+.abouth2 {
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
+
 .page-header img {
   height: 40px;
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .page-header img:first-of-type {
@@ -269,7 +146,6 @@ nav a:hover {
   font-size: 35px;
   text-align: center;
 }
-
 
 @media only screen and (min-width: 768px) {
   header {
@@ -285,7 +161,6 @@ nav a:hover {
     min-height: calc(100vh - 53px);
   }
 
-
   nav {
     margin: 0;
     display: flex;
@@ -296,11 +171,10 @@ nav a:hover {
     flex-wrap: nowrap;
   }
 
-
   .page-header h1 {
     font-size: var(--font-xtreme);
   }
-  
+
   .page-header img {
     display: flex;
     height: 50px;
@@ -308,16 +182,13 @@ nav a:hover {
     text-align: center;
     justify-content: center;
   }
-  
-  .page-header img:first-of-type {
 
+  .page-header img:first-of-type {
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-
 }
-
 .button-86 {
   all: unset;
   height: 30px;
@@ -347,7 +218,6 @@ nav a:hover {
   height: 60px;
 }
 
-
 .button-86::after,
 .button-86::before {
   content: '';
@@ -355,7 +225,7 @@ nav a:hover {
   bottom: 0;
   right: 0;
   z-index: -99999;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .button-86::before {
@@ -384,7 +254,6 @@ nav a:hover {
   background: #39ba629f;
 }
 
-
 .button-86:hover::before {
   transform: translate(5%, 20%);
   width: 110%;
@@ -403,42 +272,7 @@ nav a:hover {
   transform: translate(0, 5%);
 }
 
-.logos img {
-  max-width: 65px;
-  max-height: 65px;
-  margin-right: 20px;
-}
-
-.carla {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  max-width: 150px;
-  margin-top: 25px;
-}
-
-/* Style for the ul */
-ul {
-  list-style-type: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-}
-
-/* Style for the li items */
-ul li {
-  font-family: 'Roboto', sans-serif;
-  font-size: 32px; /* Adjust the font size as needed */
-  margin-bottom: 25px; /* Add spacing between list items */
-  line-height: 1.6; /* Adjust line height for readability */
-}
-
-/* Add a bullet point or emoji before each list item */
-ul li::before {
-  margin-right: 10px; /* Add spacing between the bullet point and text */
-}
-
-.sitelogo{
+.sitelogo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,6 +282,7 @@ ul li::before {
   text-align: center;
   align-self: center;
 }
+
 hr {
   margin-top: 50px;
   margin-bottom: 40px;
@@ -462,4 +297,3 @@ hr {
   text-align: center;
   max-width: 1300px;
 }
-
