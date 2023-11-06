@@ -9,6 +9,28 @@
   margin-top: 30px;
 }
 
+.page-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-header h1{
+  font-size: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+img.event-icon{
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+}
+
 .card {
   flex-basis: 300px;
   flex-grow:1;
@@ -65,20 +87,7 @@
   border-radius: 8px;
 }
 
-.page-header h1{
-  font-size: 100px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-align: center;
-}
 
-img.event-icon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-}
 section {
   justify-content: center;
 }

@@ -326,3 +326,197 @@ li {
   line-height: 45px;
   margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 1210px) {
+  .menu {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .menu {
+    font-size: 30px;
+  }
+
+  .menu .menulist li {
+    margin-right: 20px;
+  }
+
+  .menu .menulist li a {
+    font-size: 25px;
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}
+
+@media only screen and (min-width: 391px) and (max-width: 1424px) {
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(51, 2, 53);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: BOLD;
+    position: fixed; /* Fixed positioning to keep it at the top */
+    top: 0; /* Place it at the top of the viewport */
+  }
+
+  .menu .menulist li {
+    display: inline;
+    margin-right: 40px;
+  }
+
+  .menu .menulist li a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    transition: color 0.3s;
+  }
+
+  .menu .menulist li a:hover {
+    color: plum;
+  }
+
+  .navurl {
+    margin: 20px;
+  }
+
+  /* You can add more styles or overrides within this media query */
+}
+
+@media only screen and (max-width: 1040px) {
+  .menu .menulist {
+    font-size: 20px;
+    /* Adjust other styles as needed for smaller screens */
+  }
+
+  .menu .menulist li a {
+    font-size: 20px; /* Adjust the font size for menu items */
+  }
+}
+
+/* Media query for screens up to 395px wide */
+@media only screen and (max-width: 395px) {
+  .menu .menulist {
+    font-size: 20px; /* Adjust font size as needed */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping only if it doesn't fit */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+    height: auto; 
+  }
+
+  .menu .menulist li {
+    white-space: nowrap; /* Prevent li items from wrapping */
+    margin-right: 20px; /* Adjust margin as needed */
+    /* Add any other necessary styles for smaller screens */
+  }
+
+  .menu .menulist li a {
+    font-size: 20px; 
+    line-height: 20px;
+  }
+
+  .menu {
+    height: 150px; /* Limit the maximum height */
+    margin-bottom: 30px;
+  }
+  .navurl{
+    line-height: 20px;
+  }
+  li{
+    margin: 0;
+  }
+
+  .button-86 {
+    all: unset;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border-width: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    width: 80px; /* Example adjustment */
+    font-size: 14px; /* Example adjustment */
+    margin-left: 3px;
+  }
+
+  .button-86::after,
+  .button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all 0.4s;
+  }
+
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #34343a;
+    border-radius: 10px;
+  }
+
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #9280d99f;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+
+  .button-86.btn.danger::after {
+    background: #c50e26b2;
+  }
+
+  .button-86.btn.warn::after {
+    background: #39ba629f;
+  }
+
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+}
+
+
+
