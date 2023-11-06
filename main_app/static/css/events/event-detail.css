@@ -164,8 +164,8 @@ p.event-passed{
     min-width: 400px;
     margin: 0 auto;
     padding: 35px 30px;
-    margin: 0px, 90px, 0, 90px;
-    max-height: calc(100vh - 250px);
+    margin: 0px, 80px, 0, 90px;
+    max-height: calc(100vh - 200px);
   }
 
   .event-image {
@@ -188,7 +188,7 @@ p.event-passed{
     min-width: 350px;
     max-width: 80%;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0 30px;
   }
 
@@ -275,7 +275,6 @@ p.event-passed{
     min-width: 100%;
     margin: 0;
     padding: 15px;
-    margin-top: 80px;
   }
 
   .event-image {
@@ -283,7 +282,7 @@ p.event-passed{
     width: 100%;
     max-height: auto;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 12px;
   }
 
   .event-image img {
