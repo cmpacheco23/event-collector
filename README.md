@@ -1,9 +1,10 @@
 # Event Collector
+### Access **[Event Captcha](https://your-app-url.com)**
+
 ![Screenshot of Login](/main_app/static/images/login.png)
 ![Screenshot of the Event Details Page](/main_app/static/images/image-2.png)
 ![Screenshot of Event Details Page](/main_app/static/images/details.png)
 
-### Access **[Event Captcha](https://your-app-url.com)**
 
 ### About The App:
 
