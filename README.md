@@ -114,4 +114,4 @@ Explore these upcoming features that we're excited to introduce:
 
 ---
 
-🚀 We're committed to improving Event Collector and making it even more user-friendly. Stay tuned for updates, and feel free to share your ideas and feedback with us! Thank you for choosing Event Collector as your event tracking and management tool. We hope it simplifies your life, helps you create wonderful memories, and brings a smile to your face. 😊
+🚀 We're committed to improving Event Collector and making it even more user-friendly. Stay tuned for updates, and feel free to share your ideas and feedback with us! Thank you for choosing Event Collector as your event tracking and management tool. 
