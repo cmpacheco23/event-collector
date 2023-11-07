@@ -543,3 +543,8 @@ li {
 .aboutapp {
   margin-bottom: 30px;
 }
+
+.logoapp {
+  max-width: 270px;
+  border-radius: 50%;
+}
