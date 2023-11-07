@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: BOLD;
   padding-bottom: 10px;
@@ -22,7 +22,7 @@
 .menu .menulist li a {
   text-decoration: none;
   color: white;
-  font-size: 36px;
+  font-size: 30px;
   transition: color 0.3s;
 }
 
@@ -80,7 +80,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -374,13 +374,13 @@ li {
 
   .menu .menulist li {
     display: inline;
-    margin-right: 40px;
+    margin-right: 20px;
   }
 
   .menu .menulist li a {
     text-decoration: none;
     color: white;
-    font-size: 40px;
+    font-size: 25px;
     transition: color 0.3s;
   }
 
@@ -408,7 +408,7 @@ li {
 
 @media only screen and (max-width: 395px) {
   .menu {
-    font-size: 30px;
+    font-size: 20px;
     padding: 0;
   }
 

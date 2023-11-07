@@ -4,7 +4,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   height: calc(100vh - 80px);
-  max-width: 120vh; /* Increase the max-width to make it wider */
+  max-width: 100vw; /* Increase the max-width to make it wider */
   overflow: hidden; /* Prevent scrolling when content doesn't fill the height */
 }
 
