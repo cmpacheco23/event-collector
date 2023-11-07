@@ -9,9 +9,6 @@ main{
 
 .event-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -20,13 +17,13 @@ main{
   width: 100%;
   min-width: 400px;
   margin: 0 auto;
-  padding: 35px 30px;
+  padding: 35px 30px; 
   margin-right: 90px;
-  margin-left: 90px;
+  margin-left: 90px; 
 }
 .event-image {
   flex: 1;
-  width: 90%;
+  width: 50%;
   max-height: 100%;
   text-align: right;
 }
@@ -41,7 +38,7 @@ main{
 
 .event-details {
   flex: 1;
-  /* width: 100%; */
+  width: 100%;
   min-width: 350px;
   max-width: 80%; 
   width: 100%;
@@ -56,14 +53,14 @@ main{
 
 
 .event-details h1 {
-  font-size: 90px;
+  font-size: 60px;
   margin: 15px 0 3px;
   margin-bottom: 30px;
   font-family: 'Rancho', cursive;
 }
 
 .event-details h2 {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0 0 10px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -72,18 +69,18 @@ main{
 
 .event-details h3 {
   margin: 20px 0 10px;
-  font-size: 32px;
+  font-size: 22px;
   font-family: 'Roboto', sans-serif;
 }
 
 .event-details p {
-  font-size: 30px;
+  font-size: 22px;
   margin: 5px 0;
   font-family: 'Roboto', sans-serif;
 }
 
 p.event-passed{
-  font-size: 39px;
+  font-size: 22px;
   margin: 5px 0;
   font-style: italic;
   color: red;
@@ -98,7 +95,7 @@ p.event-passed{
 
 /* Style for the buttons */
 .btn.warn, .btn.danger  {
-  font-size: 34px;
+  font-size: 24px;
   margin-right: 45px;
 }
 
@@ -159,13 +156,14 @@ p.event-passed{
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    max-width: 90%;
+    /* max-width: 100%; */
     width: 100%;
-    min-width: 400px;
+    /* min-width: 300px; */
     margin: 0 auto;
     padding: 35px 30px;
     margin: 0px, 80px, 0, 90px;
     max-height: calc(100vh - 200px);
+    margin-top: 35px;
   }
 
   .event-image {
@@ -185,22 +183,20 @@ p.event-passed{
 
   .event-details {
     flex: 1;
-    min-width: 350px;
-    max-width: 80%;
     width: 100%;
     margin-top: 10px;
     padding: 0 30px;
   }
 
   .event-details h1 {
-    font-size: 70px;
+    font-size: 50px;
     margin: 15px 0 3px;
     margin-bottom: 30px;
     font-family: 'Rancho', cursive;
   }
 
   .event-details h2 {
-    font-size: 40px;
+    font-size: 20px;
     margin: 0 0 10px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -209,18 +205,18 @@ p.event-passed{
 
   .event-details h3 {
     margin: 20px 0 10px;
-    font-size: 32px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
   }
 
   .event-details p {
-    font-size: 30px;
+    font-size: 20px;
     margin: 5px 0;
     font-family: 'Roboto', sans-serif;
   }
 
   p.event-passed {
-    font-size: 39px;
+    font-size: 24px;
     margin: 5px 0;
     font-style: italic;
     color: red;
@@ -229,7 +225,7 @@ p.event-passed{
   }
 
   .event-actions {
-    margin-bottom: 35px;
+    margin-bottom: 24px;
     display: flex;
   }
 
@@ -273,8 +269,6 @@ p.event-passed{
     max-width: none;
     width: 100%;
     min-width: 100%;
-    margin: 0;
-    padding: 15px;
   }
 
   .event-image {
@@ -282,7 +276,7 @@ p.event-passed{
     width: 100%;
     max-height: auto;
     text-align: center;
-    margin-top: 12px;
+
   }
 
   .event-image img {

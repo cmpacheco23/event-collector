@@ -4,11 +4,11 @@
   margin: 0;
   background-color: rgb(51, 2, 53);
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Roboto', sans-serif;
   font-weight: BOLD;
   padding-bottom: 10px;
@@ -22,7 +22,7 @@
 .menu .menulist li a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   transition: color 0.3s;
 }
 
@@ -122,14 +122,14 @@ main {
 }
 
 .abouth1 {
-  font-size: 70px;
+  font-size: 60px;
   font-family: 'Rancho', cursive;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   text-align: center;
 }
 
 .abouth2 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
@@ -144,7 +144,7 @@ main {
 }
 
 .page-content {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -208,7 +208,6 @@ main {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  padding: 8px 16px;
   border-radius: 6px;
   border-width: 2px;
   text-decoration: none;
@@ -326,14 +325,14 @@ img.carla:hover {
 }
 
 li {
-  font-size: 35px;
+  font-size: 30px;
   line-height: 45px;
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 1210px) {
   .menu {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
