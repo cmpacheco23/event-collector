@@ -14,10 +14,10 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /code
 
 WORKDIR /code
-# RUN apt-get update && apt-get install -y \
-#     libpq-dev \
-#     gcc \
-#     && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /tmp/requirements.txt
 RUN set -ex && \
