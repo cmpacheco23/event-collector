@@ -91,3 +91,7 @@ img.event-icon{
 section {
   justify-content: center;
 }
+
+main {
+  max-width: 1800px;
+}
