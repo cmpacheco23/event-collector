@@ -3,13 +3,13 @@
 ![Screenshot of the Event Details Page](/main_app/static/images/image-2.png)
 ![Screenshot of Event Details Page](/main_app/static/images/details.png)
 
+### Access **[Event Captcha](https://your-app-url.com)**
+
 ### About The App:
 
 Welcome to Event Captcha, a platform that helps you organize and track all your events. Whether you're planning upcoming gatherings or reminiscing about past events, Event Collector is your ultimate digital scrapbook for every moment. Say goodbye to the hassle of forgetting memorable occasions and missing out on exciting future plans.
 
 
-Ready to start using Event Captcha? 
-### Access **[Event Captcha](https://your-app-url.com)**
 
 
 
