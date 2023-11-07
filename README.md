@@ -103,13 +103,13 @@ CATEGORIES = (
 
 Explore these upcoming features that we're excited to introduce:
 
-[ ] **Note Section**: We're working on adding a dedicated note section for each event. Keep track of important details and memories associated with your events.
+- [ ] **Note Section**: We're working on adding a dedicated note section for each event. Keep track of important details and memories associated with your events.
 
-[ ] **Event Photo Upload**: Share your experiences with event photos. Upload and display images to capture the essence of your events.
+- [ ] **Event Photo Upload**: Share your experiences with event photos. Upload and display images to capture the essence of your events.
 
-[ ] **Event Collections**: Organize your events with ease. Create event collections, such as "Trip To XYZ," and link related events for better event management.
+- [ ] **Event Collections**: Organize your events with ease. Create event collections, such as "Trip To XYZ," and link related events for better event management.
 
-[ ] **Event Sharing**: Invite friends to join your events by sharing them seamlessly. Whether it's a small gathering or a grand celebration, this feature will make collaboration a breeze.
+- [ ] **Event Sharing**: Invite friends to join your events by sharing them seamlessly. Whether it's a small gathering or a grand celebration, this feature will make collaboration a breeze.
 
 
 ---
