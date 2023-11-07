@@ -40,7 +40,7 @@ img.event-icon{
   box-shadow: #67328b 5px 10px 18px;
   gap: 20px;
   border-radius: 15px;
-  background-color: #d6c3e8;
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #ccbad3 100%);
 }
 
 .card-content {

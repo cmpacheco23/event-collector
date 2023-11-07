@@ -2,21 +2,27 @@
 {% load static %}
 {% block content %}
 <section class="about">
-  <h1 class="abouth1">About the Event Collector</h1>
-  <img class="carla" src="{% static 'images/carla.png' %}" alt="github logo">
-  <h2 class="abouth2">Carla Pacheco</h2>
-  <p class="page-content">
-    Software Engineer passionate about crafting technical solutions that bridge the gap between client needs and innovative products. My background is in marketing and e-commerce, primarily within MarTech and SaaS companies. Also, I am currently job seeking!
-  </p>
-  <div class="logos">
-    <a href="https://github.com/cmpacheco23">
-      <img src="{% static 'images/github.svg' %}" alt="github logo">
-    </a>
-    <a href="https://www.linkedin.com/in/thecarlapacheco/">
-      <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn logo">
-    </a>
+  <div class="aboutme">
+    <h1 class="abouth1">About the Event Collector</h1>
+    <img class="carla" src="{% static 'images/carla.png' %}" alt="github logo">
+    <h2 class="abouth2">Carla Pacheco</h2>
+    <p class="page-content">
+      Software Engineer passionate about crafting technical solutions that bridge the gap between client needs and innovative products. My background is in marketing and e-commerce, primarily within MarTech and SaaS companies. Also, I am currently job seeking!
+    </p>
+    <div class="logos">
+      <a href="https://github.com/cmpacheco23">
+        <img src="{% static 'images/github.svg' %}" alt="github logo">
+      </a>
+      <a href="https://www.linkedin.com/in/thecarlapacheco/">
+        <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn logo">
+      </a>
+    </div>
+    <div class="hr-container">
+      <hr class="hr" />
+    </div>
+    
   </div>
-  <hr />
+  <div class="aboutapp">
     <h1 class="abouth1">About EventCaptcha</h1>
     <p class="page-content">
       EventCaptcha is your ultimate digital scrapbook for every event in your life, past, present, and future. Say goodbye to the hassle of forgetting memorable moments and missing out on exciting future gatherings. With EventKapture, you can effortlessly capture the essence of each event, creating a vivid and personal record that's as unique as you are.
@@ -29,6 +35,7 @@
       <li> 📌 📅 Never Miss a Beat: Stay on top of your event schedule with built-in reminders and calendars. Whether it's a concert, wedding, or simple meet-up with friends, EventKapture keeps you in the loop.
       </li>
     </ul>
+  </div>
 
 </section>
 {% endblock %}

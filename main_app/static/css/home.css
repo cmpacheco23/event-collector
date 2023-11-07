@@ -36,7 +36,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 800px !important; /* Use !important to override other styles */
+  max-width: 800px;
 }
 
 
@@ -46,6 +46,17 @@ main {
   margin: 20px 0; /* Increase margin for more spacing */
   font-family: 'Rancho', cursive;
   color: #67328b;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  padding: 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  /* Add other styles as needed */
+}
+input:focus {
+  font-size: 36px; 
 }
 
 .login > p {
@@ -62,11 +73,7 @@ main {
   font-family: 'Roboto', sans-serif;
 }
 
-.login input {
-  padding: 5px 10px; /* Increase padding for larger input fields */
-  font-family: 'Roboto', sans-serif;
-  font-size: 36px; /* Increase font size */
-}
+
 
 .button-86.loginbtn.btn.submit {
   display: flex;
@@ -164,3 +171,4 @@ main {
     max-width: 600px; /* Adjust the logo container width for larger screens */
   }
 }
+

@@ -91,8 +91,8 @@ body {
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  background-color: #F7EDE2;
-  --nav-bg: rgba(104, 197, 248, 0.7);
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); --nav-bg: rgba(104, 197, 248, 0.7);
   --nav-bg-ff: rgba(104, 197, 248, 0.9);
   --borders: rgb(36, 116, 248) solid 2px;
   --text-color: rgb(17, 20, 17);
@@ -122,7 +122,7 @@ main {
 }
 
 .abouth1 {
-  font-size: 60px;
+  font-size: 70px;
   font-family: 'Rancho', cursive;
   letter-spacing: 2px;
   text-align: center;
@@ -146,6 +146,7 @@ main {
 .page-content {
   font-size: 35px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -302,6 +303,8 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 55px;
+  margin-top: 30px;
 }
 
 .logos a {
@@ -518,4 +521,25 @@ li {
     transition: 0s;
     transform: translate(0, 5%);
   }
+}
+
+.hr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #8532bc 8px 10px 18px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.hr {
+  border: none; /* Remove the default <hr> border */
+  height: 3px; /* Adjust the height as needed */
+  width: 100%; /* Adjust the width as needed */
+  background-color: #59247c; /* Set the background color */
+  margin: 0; /* Remove default margins */
+}
+
+.aboutapp {
+  margin-bottom: 30px;
 }
