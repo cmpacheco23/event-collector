@@ -12,6 +12,10 @@
   vertical-align: middle; /* Align the h1 element vertically */
 }
 
+.deleteit.page-header {
+  margin-top: 40px;
+  font-size: 60px;
+}
 img.event-icon {
   width: 70px;
   height: 70px;
