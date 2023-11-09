@@ -389,3 +389,9 @@ div{
 .h2delete{
   font-size: 60px;
 }
+
+.deletesection a,
+.deletesection button {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
