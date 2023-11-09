@@ -155,6 +155,10 @@ td > textarea {
   background: #a239ba9f;
 }
 
+.deletepg{
+  display: inline-block;
+  margin-right: 20px;
+}
 .button-86:hover::before {
   transform: translate(5%, 20%);
   width: 110%;
@@ -387,6 +391,7 @@ div{
 }
 
 .h2delete{
+  margin-top: 50px;
   font-size: 60px;
 }
 
