@@ -151,6 +151,9 @@ td > textarea {
   background: #39ba629f;
 }
 
+.button-86.secondary::after {
+  background: #a239ba9f;
+}
 
 .button-86:hover::before {
   transform: translate(5%, 20%);
@@ -384,5 +387,5 @@ div{
 }
 
 .h2delete{
-  
+  font-size: 60px;
 }
