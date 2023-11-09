@@ -1,4 +1,4 @@
-# Event Collector
+# Event Captcha
 ### Access **[Event Captcha](https://eventcaptcha.fly.dev/)**
 
 ![Screenshot of Login](/main_app/static/images/login.png)
