@@ -404,6 +404,9 @@ div{
 h1.h1delete{
   margin-top: 50px;
   font-size: 60px;
+  color: black;
+  font-style: normal;
+  font-family: 'Rancho', cursive;
 }
 
 .deletesection a,
