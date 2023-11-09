@@ -5,8 +5,9 @@
   flex-wrap: wrap;
   gap: 30px;
   min-height: 250px;
-  max-height: 500px;
-  margin-top: 30px;
+  max-height: 400px;
+  margin-top: 15px;
+  min-width: 280px;
 }
 
 .page-header {
@@ -33,16 +34,17 @@ img.event-icon{
 }
 
 .card {
-  flex-basis: 200px;
-  flex-grow:1;
+  flex-basis: 280px;
+  flex-grow: 0; /* Change flex-grow to 0 */
   box-sizing: border-box;
   margin: 20px;
-  border: 1px #a936ab;
-  box-shadow: #67328b 5px 10px 18px;
+  border: 1px solid #a936ab; /* Added 'solid' for border style */
+  box-shadow: 5px 10px 18px #67328b; /* Corrected box-shadow */
   gap: 20px;
   border-radius: 15px;
   background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #ccbad3 100%);
 }
+
 
 .card-content {
   padding: 10px 20px 10px 20px;

@@ -1,5 +1,5 @@
 # Event Collector
-### Access **[Event Captcha](https://your-app-url.com)**
+### Access **[Event Captcha](https://eventcaptcha.fly.dev/)**
 
 ![Screenshot of Login](/main_app/static/images/login.png)
 ![Screenshot of the Event Details Page](/main_app/static/images/image-2.png)
@@ -75,7 +75,7 @@ CATEGORIES = (
 ``````
 
 **A glimpse of how it looks:**
-![Event List Screenshot](image-1.png)
+![Event List Screenshot](/main_app/static/images/image-1.png)
 
 
 ## Technologies Used:
