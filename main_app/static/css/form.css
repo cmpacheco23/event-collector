@@ -414,6 +414,7 @@ h1.h1delete{
 .deletesection button {
   display: inline-block;
   margin-right: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px;
 }
 
 h1{
