@@ -391,6 +391,10 @@ div{
 }
 
 .h2delete{
+  margin-top: 20px;
+  font-size: 60px;
+}
+.h1delete{
   margin-top: 50px;
   font-size: 60px;
 }
