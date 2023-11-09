@@ -15,6 +15,9 @@
 .deleteit.page-header {
   margin-top: 40px;
   font-size: 60px;
+  color: black;
+  font-style: normal;
+  font-family: 'Rancho', cursive;
 }
 img.event-icon {
   width: 70px;
