@@ -7,9 +7,9 @@
   <h1>Want To Delete Event?</h1>
   <img src="{% static 'images/nerd-cat.svg' %}" alt=""/>
 </div>
-<h2>Are you sure you want to delete {{ event.name }}?</h2>
+<h2 class="h2delete">Are you sure you want to delete {{ event.name }}?</h2>
 
-<form action="" method="post" class="form">
+<form action="" method="post" class="form" id="deleteform">
   {% csrf_token %}
   <a 
     href="{% url 'event-detail' event.id %}" 
@@ -17,7 +17,7 @@
   >
     Cancel
   </a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
+  <button type="submit" class="btn danger button-86 ">Yes - Delete!</button>
 </form>
 
 {% endblock %}
