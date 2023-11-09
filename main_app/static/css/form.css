@@ -12,8 +12,8 @@
   vertical-align: middle; /* Align the h1 element vertically */
 }
 
-.deleteit.page-header {
-  margin-top: 40px;
+.deleteit{
+  margin-top: 50px;
   font-size: 60px;
   color: black;
   font-style: normal;
