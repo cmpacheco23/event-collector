@@ -10,6 +10,7 @@
   font-style: normal;
   display: inline; /* Make the h1 element inline to stay on the same line */
   vertical-align: middle; /* Align the h1 element vertically */
+  font-family: 'Rancho', cursive;
 }
 
 .deleteit{
@@ -413,4 +414,8 @@ h1.h1delete{
 .deletesection button {
   display: inline-block;
   margin-right: 20px; /* Adjust the margin as needed */
+}
+
+h1{
+  font-family: 'Rancho', cursive;
 }
